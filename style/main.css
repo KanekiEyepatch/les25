@@ -1,0 +1,52 @@
+.header {
+    background-image: url("../afbeelding/banner.jpg");
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+ #content {
+    text-align: center;
+    padding-top: 25px;
+ }
+
+ .nav-tabs .nav-item .nav-link {
+    background-color: #ffffff;
+    color: #f30202;
+    font-weight: bold;
+ }
+   
+  .tab-content {
+    border: 1px solid #ff3300;
+    border-top: transparent;
+    padding: 15px;
+  }
+  
+ .tab-content .tab-pane {
+    background-color: #FFF;
+    color: #0080FF;
+    min-height: 200px;
+    height: auto;
+  }
+
+  .btn {
+    margin-top: 20px;
+    background-color: #f30202;
+    border-color: black;
+    color: white;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  #logo {
+    width: 50px;
+  }
+
+  .footer {
+    bottom: 0;
+  }
