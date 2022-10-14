@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over mij</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../style/main.css">
+</head>
+<body>
+    <header class="container-sm-fluid">
+        <div class="header"></div>
+    </header>
+    <ul class="nav nav-tabs justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home:</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="overmij.html">Over mij:</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact:</a>
+        </li>
+    </ul>
+    <div class="container sm" id="content">
+        <h1>Over mij</h1>
+        <p>
+            Zoals misschien wel duidelijk is, kijk ik anime, lees fantasy boeken en game ik graag. Mijn werk is op dit moment operator in een fabriek maar daar probeer ik dus verandering in te brengen. 
+            Heb wel ICT opleidingen gedaan  en voordat ik ging werken ook wat tijdelijke IT gerelateerde baantjes gehad dus hopelijk werkt dat nog wel in mijn voordeel.
+        </p>
+            <input id="myInput" type="text" placeholder="Zoek..">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Anime</th>
+                        <th>Logo</th>
+                        <th>Rating</th>
+                        <th>Ongoing</th>
+                    </tr>
+                </thead>
+                <tbody id="animetabel">
+                    <tr>
+                    <td>Kimetsu no yaiba</td>
+                    <td><img id="logo" src="../afbeelding/logo1.jpg" alt="Kimetsu no yaiba/Demon slayer"></td>
+                    <td>9/10</td>
+                    <td>Ja</td>
+                </tr>
+                <tr>
+                    <td>One Piece</td>
+                    <td><img id="logo" src="../afbeelding/logo2.jpg" alt="One Piece"></td>
+                    <td>8/10</td>
+                    <td>Ja</td>
+                </tr>
+                <tr>
+                    <td>Naruto</td>
+                    <td><img id="logo" src="../afbeelding/logo3.jpg" alt="Naruto"></td>
+                    <td>7/10</td>
+                    <td>Nee</td>
+                </tr>
+                <tr>
+                    <td>Akame ga kill</td>
+                    <td><img id="logo" src="../afbeelding/logo4.jpg" alt="Akame ga kill"></td>
+                    <td>10/10</td>
+                    <td>Nee</td>
+                </tr>
+                </tbody>
+          </table>
+    </div>
+
+    <footer class="fixed-bottom">
+        <p id="demo"></p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#animetabel tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        </script>
+
+    <script>
+        const d = new Date();
+        document.getElementById("demo").innerHTML = d;
+    </script>
+</body>
+</html>
